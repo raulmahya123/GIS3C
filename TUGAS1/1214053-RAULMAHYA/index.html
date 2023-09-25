@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUHNCULIN GEOJSONNYA</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div >
+    <h1>ini geo jsonLine</h1>
+    <div id="map" style="height: 500px;"></div>
+
+    <!-- Include Leaflet via CDN -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Include jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="module">
+        // Create a map
+        const map = L.map('map').setView([-6.906227014340985, 107.66378289976814], 12);
+
+        // Add a Tile Layer (replace 'YOUR_TILE_LAYER_URL' with a valid tile layer URL)
+      // Add a Tile Layer (use OpenStreetMap)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+
+        // Fetch GeoJSON data from an external file using jQuery
+        $.getJSON('./geojsonLinestring.json', function (data) {
+            // Add GeoJSON data as a layer
+            L.geoJSON(data).addTo(map);
+        });
+        $.getJSON('./geojsonPloygon.json', function (data) {
+            // Add GeoJSON data as a layer
+            L.geoJSON(data).addTo(map);
+        });
+        $.getJSON('./goejsondrawPoint.json', function (data) {
+            // Add GeoJSON data as a layer
+            L.geoJSON(data).addTo(map);
+        });
+    </script>
+    </div>
+    
+</body>
+
+</html>

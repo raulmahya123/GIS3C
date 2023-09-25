@@ -37,7 +37,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             // Add GeoJSON data as a layer
             L.geoJSON(data).addTo(map);
         });
-        $.getJSON('./goejsondrawPoint.json', function (data) {
+          $.getJSON('./geojsonPloygon.json', function (data) {
             // Add GeoJSON data as a layer
             L.geoJSON(data).addTo(map);
         });

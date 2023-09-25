@@ -3,7 +3,10 @@
     "features": [
 {
     "type": "Feature",
-    "properties": {},
+    "properties": {
+      "name":"Antapani",
+      "desa": "Antapani Tengah"
+    },
     "geometry": {
       "coordinates": [
         [
@@ -294,7 +297,12 @@
   },
   {
     "type": "Feature",
-    "properties": {},
+    "properties": {
+      "properties": {
+        "name":"Antapani",
+        "desa": "Antapani Tengah"
+      }
+    },
     "geometry": {
       "type": "Polygon",
       "coordinates": [

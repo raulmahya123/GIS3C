@@ -29,15 +29,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
         // Fetch GeoJSON data from an external file using jQuery
-        $.getJSON('./geojsonLinestring.json', function (data) {
+        $.getJSON('../TUGAS1/1214053-RAULMAHYA/geojsonLinestring.json', function (data) {
             // Add GeoJSON data as a layer
             L.geoJSON(data).addTo(map);
         });
-        $.getJSON('./geojsonPloygon.json', function (data) {
+        $.getJSON('../TUGAS1/1214053-RAULMAHYA/geojsonPloygon.json', function (data) {
             // Add GeoJSON data as a layer
             L.geoJSON(data).addTo(map);
         });
-          $.getJSON('./geojsonPloygon.json', function (data) {
+          $.getJSON('../TUGAS1/1214053-RAULMAHYA/geojsonPloygon.json', function (data) {
             // Add GeoJSON data as a layer
             L.geoJSON(data).addTo(map);
         });
